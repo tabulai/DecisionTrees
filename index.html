@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>State of Decision Tree Algorithms: June 2026</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5b667a;
+      --line: #d8deea;
+      --paper: #fffaf2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-2: #9a3412;
+      --tint: #edf7f4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.62;
+    }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #172033 62%, #3b2f2f 100%);
+      color: white;
+      padding: 56px 24px 38px;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; }
+    .eyebrow { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.84; }
+    h1 { font-size: clamp(2.1rem, 5vw, 4.3rem); line-height: 1.05; margin: 14px 0 18px; max-width: 920px; }
+    .subtitle { max-width: 820px; font-size: 1.12rem; color: #dce8e5; }
+    .meta { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill { border: 1px solid rgba(255,255,255,0.26); border-radius: 999px; padding: 6px 12px; color: #ecfeff; font-size: 0.9rem; }
+    main { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 28px; padding: 30px 24px 64px; }
+    nav {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    nav h2 { font-size: 0.82rem; margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    nav a { display: block; color: var(--accent); text-decoration: none; padding: 6px 0; font-size: 0.94rem; }
+    article {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px clamp(18px, 4vw, 42px) 44px;
+      box-shadow: 0 18px 60px rgba(23,32,51,0.08);
+    }
+    article h1 { display: none; }
+    article h2 { margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 1.72rem; line-height: 1.18; }
+    article h2:first-of-type { border-top: 0; }
+    article h3 { margin-top: 28px; font-size: 1.18rem; }
+    a { color: var(--accent); }
+    code { background: var(--tint); padding: 0.12em 0.35em; border-radius: 4px; }
+    pre { overflow-x: auto; background: #111827; color: #e5e7eb; padding: 16px; border-radius: 8px; }
+    .citation { color: var(--accent-2); font-size: 0.88em; text-decoration: none; }
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.94rem; }
+    th, td { border: 1px solid var(--line); padding: 9px 11px; vertical-align: top; }
+    th { background: #f3f7f5; text-align: left; }
+    footer { color: var(--muted); border-top: 1px solid var(--line); padding: 24px; }
+    @media (max-width: 860px) {
+      main { display: block; padding: 18px 12px 44px; }
+      nav { position: static; margin-bottom: 16px; }
+      article { padding: 14px 16px 34px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">Literature review</div>
+      <h1>State of Decision Tree Algorithms: June 2026</h1>
+      <p class="subtitle">A literature review of tree induction, split criteria, pruning, tree ensembles, optimal sparse trees, streaming trees, and specialized forests.</p>
+      <div class="meta">
+        <span class="pill">Author: Bojan Tunguz</span>
+        <span class="pill">Version 0.2</span>
+        <span class="pill">Audit date: June 6, 2026</span>
+        <span class="pill">105 references</span>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <nav aria-label="Report sections">
+      <h2>Sections</h2>
+      <a href="#executive-summary">Executive Summary</a>
+<a href="#scope-and-evidence-base">Scope and Evidence Base</a>
+<a href="#classical-top-down-induction">Classical Top-Down Induction</a>
+<a href="#split-criteria">Split Criteria</a>
+<a href="#stopping-and-pruning">Stopping and Pruning</a>
+<a href="#structural-variants">Structural Variants</a>
+<a href="#scalable-tree-construction">Scalable Tree Construction</a>
+<a href="#randomized-and-bagged-trees">Randomized and Bagged Trees</a>
+<a href="#boosted-decision-trees">Boosted Decision Trees</a>
+<a href="#optimal-and-sparse-trees">Optimal and Sparse Trees</a>
+<a href="#target-specific-trees">Target-Specific Trees</a>
+<a href="#streaming-trees">Streaming Trees</a>
+<a href="#current-algorithmic-picture">Current Algorithmic Picture</a>
+<a href="#demo-notebook-plan">Demo Notebook Plan</a>
+<a href="#open-problems">Open Problems</a>
+    </nav>
+    <article>
+      <h1>State of Decision Tree Algorithms: June 2026</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Decision tree research in 2026 is best understood as a set of algorithms for constructing recursive partitions. The central questions are still algorithmic: how to choose a split, when to stop splitting, how to prune, how to handle continuous and categorical attributes, how to build trees at scale, how to combine many trees, and when exact optimization is worth its cost.</p>
+<p>This report deliberately excludes non-tree predictors and package-level comparisons. The focus is on algorithms whose learned object is a decision tree, a regression tree, a model tree, or an ensemble of decision trees. Within that scope, the field has six major lines:</p>
+<div class="table-wrap"><table><thead><tr><th>Line</th><th>Core question</th><th>Representative algorithms</th></tr></thead><tbody><tr><td>Classical top-down induction</td><td>How should a greedy tree choose each split?</td><td>AID, CHAID, ID3, C4.5, CART, QUEST, GUIDE, conditional inference trees</td></tr><tr><td>Pruning and regularization</td><td>How should a grown tree be simplified?</td><td>Cost-complexity pruning, pessimistic pruning, MDL pruning, reduced-error pruning</td></tr><tr><td>Structural variants</td><td>What shape and split family should the tree use?</td><td>Binary trees, multiway trees, oblique trees, model trees, logistic model trees</td></tr><tr><td>Tree ensembles</td><td>How should many trees be combined?</td><td>Bagging, random forests, ExtraTrees, rotation forests, boosted trees</td></tr><tr><td>Exact and sparse trees</td><td>Can the whole tree be optimized globally?</td><td>OCT, OSDT, GOSDT, DL8.5, MurTree, SAT and mixed-integer formulations</td></tr><tr><td>Specialized tree algorithms</td><td>How should splitting change for a statistical target?</td><td>Quantile trees, survival trees, causal trees, isolation trees, streaming trees</td></tr></tbody></table></div>
+<p>The practical center of the field remains simple: greedy top-down trees are fast, readable, and unstable; pruning controls complexity; ensembles reduce variance or bias; exact optimization gives smaller and more faithful trees when scale permits. The research frontier is not about replacing trees with other model families. It is about making tree induction more statistically principled, more scalable, more constrained, more target-specific, and more globally optimal.</p>
+<h2 id="scope-and-evidence-base">Scope and Evidence Base</h2>
+<p>This literature review is current to June 6, 2026. The accompanying bibliography contains 105 references, all selected for their relevance to decision-tree algorithms or tree-specific ensembles. The source list covers classical tree induction, split criteria, pruning, oblique trees, model trees, scalable tree construction, random forests, boosted trees, optimal sparse trees, Bayesian trees, survival trees, causal trees, streaming trees, and anomaly-detection trees.</p>
+<p>The inclusion boundary is intentionally strict:</p>
+<div class="table-wrap"><table><thead><tr><th>Included</th><th>Excluded</th></tr></thead><tbody><tr><td>Algorithms that output a tree or ensemble of trees</td><td>Non-tree predictors</td></tr><tr><td>Split criteria and tree-growing procedures</td><td>General tabular prediction comparisons</td></tr><tr><td>Pruning, stopping, and regularization methods</td><td>Package feature comparisons</td></tr><tr><td>Exact, approximate, and scalable tree construction</td><td>Methods whose final model is not a tree</td></tr><tr><td>Target-specific tree algorithms</td><td>Post-hoc explanations of unrelated models</td></tr></tbody></table></div>
+<p>This report is a synthesis, not a benchmark paper. It emphasizes algorithmic ideas, failure modes, and how the main families relate to one another.</p>
+<h2 id="classical-top-down-induction">Classical Top-Down Induction</h2>
+<p>Classical tree induction is built around recursive partitioning. At each node, the algorithm evaluates candidate splits, chooses one, partitions the data, and recurses until a stopping rule fires. The resulting tree is then often pruned.</p>
+<p>Early automatic interaction detection methods framed recursive partitioning as a statistical analysis tool for survey and categorical data [<a class="citation" href="references/bibliography.bib" title="morgan1963aid">morgan1963aid</a>; <a class="citation" href="references/bibliography.bib" title="kass1980chaid">kass1980chaid</a>]. Hunt, Marin, and Stone supplied an early computational view of induction [<a class="citation" href="references/bibliography.bib" title="hunt1966experiments">hunt1966experiments</a>]. ID3 made entropy and information gain the standard machine-learning presentation of top-down tree induction [<a class="citation" href="references/bibliography.bib" title="quinlan1986id3">quinlan1986id3</a>]. CART established the statistical workhorse formulation: binary recursive partitioning, impurity reduction, surrogate splits, regression trees, and cost-complexity pruning [<a class="citation" href="references/bibliography.bib" title="breiman1984cart">breiman1984cart</a>]. C4.5 extended ID3 with continuous attributes, missing values, gain ratio, pruning, and rule extraction [<a class="citation" href="references/bibliography.bib" title="quinlan1993c45">quinlan1993c45</a>; <a class="citation" href="references/bibliography.bib" title="quinlan1996continuous">quinlan1996continuous</a>].</p>
+<p>The classical algorithms differ mainly in split scoring and tree shape:</p>
+<div class="table-wrap"><table><thead><tr><th>Algorithm</th><th>Split style</th><th>Main contribution</th></tr></thead><tbody><tr><td>AID</td><td>Multiway statistical splits</td><td>Early recursive interaction detection for survey data</td></tr><tr><td>CHAID</td><td>Chi-square based multiway splits</td><td>Categorical interaction detection with merging</td></tr><tr><td>ID3</td><td>Information gain</td><td>Entropy-based top-down induction</td></tr><tr><td>C4.5</td><td>Gain ratio and threshold search</td><td>Continuous attributes, missing values, pruning, rules</td></tr><tr><td>CART</td><td>Gini, squared error, twoing, deviance</td><td>Binary trees, regression trees, surrogate splits, cost-complexity pruning</td></tr><tr><td>QUEST</td><td>Statistical tests</td><td>Reduced split-selection bias</td></tr><tr><td>GUIDE</td><td>Residual and chi-square diagnostics</td><td>Unbiased split selection and interaction detection</td></tr><tr><td>Conditional inference trees</td><td>Permutation tests</td><td>Separates variable selection from split-point selection</td></tr></tbody></table></div>
+<p>The common limitation is greediness. A locally good split can prevent a globally better small tree. That limitation explains why pruning, ensembles, and exact optimization all became major branches of the field.</p>
+<h2 id="split-criteria">Split Criteria</h2>
+<p>Split criteria define what a tree is optimizing locally. For classification, the classical criteria include entropy, information gain, gain ratio, Gini impurity, misclassification impurity, twoing, and chi-square tests. For regression, the standard criterion is reduction in squared error or variance, though absolute error, quantile loss, deviance, and target-specific losses are also possible.</p>
+<p>Different criteria encode different biases:</p>
+<div class="table-wrap"><table><thead><tr><th>Criterion family</th><th>Typical use</th><th>Bias or caveat</th></tr></thead><tbody><tr><td>Information gain</td><td>ID3-style classification</td><td>Favors high-cardinality attributes</td></tr><tr><td>Gain ratio</td><td>C4.5-style classification</td><td>Corrects some high-cardinality bias but can prefer small intrinsic value</td></tr><tr><td>Gini impurity</td><td>CART classification</td><td>Fast and usually close to entropy in behavior</td></tr><tr><td>Chi-square tests</td><td>CHAID and interaction trees</td><td>Natural for categorical predictors and multiway splits</td></tr><tr><td>Permutation tests</td><td>Conditional inference trees</td><td>Reduces variable-selection bias</td></tr><tr><td>Squared-error reduction</td><td>Regression trees</td><td>Sensitive to outliers</td></tr><tr><td>Log-rank and survival scores</td><td>Survival trees and forests</td><td>Designed for censored outcomes</td></tr><tr><td>Treatment-effect heterogeneity</td><td>Causal trees and forests</td><td>Splits for causal contrast rather than prediction error</td></tr></tbody></table></div>
+<p>QUEST, GUIDE, and conditional inference trees are especially important because they expose a subtle problem: split selection is not just about finding a threshold. The algorithm must also decide which variable receives a chance to split. If that decision is biased toward variables with many possible cutpoints, the tree can look accurate while encoding a selection artifact [<a class="citation" href="references/bibliography.bib" title="loh1997quest">loh1997quest</a>; <a class="citation" href="references/bibliography.bib" title="loh2002guide">loh2002guide</a>; <a class="citation" href="references/bibliography.bib" title="hothorn2006ctree">hothorn2006ctree</a>].</p>
+<h2 id="stopping-and-pruning">Stopping and Pruning</h2>
+<p>Stopping and pruning are the first line of defense against overfitting. A top-down tree can keep splitting until every leaf is pure, but that usually produces a brittle model. Tree algorithms therefore regulate complexity through pre-pruning, post-pruning, or both.</p>
+<p>Pre-pruning stops tree growth early using rules such as maximum depth, minimum samples per leaf, minimum impurity reduction, or statistical significance tests. It is cheap, but it can stop before a useful interaction appears. Post-pruning grows a larger tree and then removes branches using validation error, cost-complexity penalties, pessimistic error estimates, or description-length criteria [<a class="citation" href="references/bibliography.bib" title="quinlan1987simplifying">quinlan1987simplifying</a>; <a class="citation" href="references/bibliography.bib" title="quinlan1989mdl">quinlan1989mdl</a>; <a class="citation" href="references/bibliography.bib" title="mingers1989empirical">mingers1989empirical</a>; <a class="citation" href="references/bibliography.bib" title="esposito1997surveypruning">esposito1997surveypruning</a>].</p>
+<p>CART&#x27;s cost-complexity pruning remains the cleanest canonical example. It minimizes empirical loss plus a penalty proportional to the number of terminal nodes. Varying the penalty generates a nested sequence of subtrees, and a validation procedure selects the preferred complexity [<a class="citation" href="references/bibliography.bib" title="breiman1984cart">breiman1984cart</a>]. Recent work on optimal pruning shows that even pruning, often treated as a settled engineering detail, still contains nontrivial algorithmic complexity [<a class="citation" href="references/bibliography.bib" title="harviainen2025pruning">harviainen2025pruning</a>].</p>
+<h2 id="structural-variants">Structural Variants</h2>
+<p>Classical CART-style trees are axis-aligned and binary: each internal node asks a question of the form <code>x_j &lt;= t</code>. That format is readable and computationally convenient, but it is not the only tree structure.</p>
+<p>Multiway trees split a categorical attribute into more than two branches. They can be compact for nominal variables, but they can also fragment data quickly. Oblique trees use linear combinations of features, such as <code>w&#x27;x &lt;= t</code>, and can represent tilted decision boundaries with fewer nodes. OC1 is the classic oblique-tree system [<a class="citation" href="references/bibliography.bib" title="murthy1994oc1">murthy1994oc1</a>]. Model trees place a local model in each leaf. M5 and M5&#x27; use tree structure to partition the input space and fit local linear regression behavior [<a class="citation" href="references/bibliography.bib" title="quinlan1992m5">quinlan1992m5</a>; <a class="citation" href="references/bibliography.bib" title="wang1997m5prime">wang1997m5prime</a>]. Logistic model trees do the analogous thing for classification [<a class="citation" href="references/bibliography.bib" title="landwehr2005lmt">landwehr2005lmt</a>].</p>
+<p>These variants trade readability against compactness:</p>
+<div class="table-wrap"><table><thead><tr><th>Variant</th><th>Strength</th><th>Cost</th></tr></thead><tbody><tr><td>Axis-aligned binary tree</td><td>Simple rules and fast search</td><td>May need many nodes for diagonal boundaries</td></tr><tr><td>Multiway categorical tree</td><td>Compact categorical splits</td><td>Can create small leaves quickly</td></tr><tr><td>Oblique tree</td><td>Compact geometric boundaries</td><td>Harder split optimization and less transparent rules</td></tr><tr><td>Model tree</td><td>Smooth local regression behavior</td><td>Leaf model adds interpretive burden</td></tr><tr><td>Logistic model tree</td><td>Local linear classification inside leaves</td><td>More complex fitting and explanation</td></tr></tbody></table></div>
+<p>The key lesson is that &quot;decision tree&quot; is not a single model class. Tree algorithms differ in split geometry, leaf prediction, branching factor, and search procedure.</p>
+<h2 id="scalable-tree-construction">Scalable Tree Construction</h2>
+<p>Large-data tree induction created its own algorithmic literature before modern hardware made brute-force threshold search easier. The central challenge is that naive tree construction repeatedly scans and sorts data for candidate splits. Scalable algorithms reduce sorting, reduce passes over data, or restructure the split search.</p>
+<p>SLIQ introduced pre-sorted attribute lists and a breadth-first construction strategy for scalable classification [<a class="citation" href="references/bibliography.bib" title="mehta1996sliq">mehta1996sliq</a>]. SPRINT removed memory constraints more aggressively and supported parallel construction through attribute lists [<a class="citation" href="references/bibliography.bib" title="shafer1996sprint">shafer1996sprint</a>]. RainForest separated sufficient statistics from raw data so the algorithm could decide splits using compact AVC sets [<a class="citation" href="references/bibliography.bib" title="gehrke1998rainforest">gehrke1998rainforest</a>]. PUBLIC integrated building and pruning so that subtrees unlikely to survive pruning could be avoided [<a class="citation" href="references/bibliography.bib" title="rastogi1998public">rastogi1998public</a>]. BOAT used bootstrapped samples to construct an optimistic tree and then corrected it with data passes [<a class="citation" href="references/bibliography.bib" title="gehrke1999boat">gehrke1999boat</a>].</p>
+<p>The scalable-tree literature is still conceptually useful. It shows that tree induction is not only a statistical problem; it is also a data-structures and systems problem. Even when a modern implementation hides the details, the algorithmic bottlenecks remain the same: split search, sorting, sufficient statistics, memory locality, and distributed synchronization.</p>
+<h2 id="randomized-and-bagged-trees">Randomized and Bagged Trees</h2>
+<p>Bagging reduces variance by training trees on bootstrap samples and averaging their predictions [<a class="citation" href="references/bibliography.bib" title="breiman1996bagging">breiman1996bagging</a>]. Random forests add feature randomization at each split, making the individual trees less correlated [<a class="citation" href="references/bibliography.bib" title="breiman2001randomforests">breiman2001randomforests</a>]. ExtraTrees push randomization further by choosing random split thresholds rather than optimizing every threshold [<a class="citation" href="references/bibliography.bib" title="geurts2006extratrees">geurts2006extratrees</a>]. Rotation forests transform feature subsets before fitting trees [<a class="citation" href="references/bibliography.bib" title="rodriguez2006rotation">rodriguez2006rotation</a>]. Mondrian forests use a stochastic partition process that supports online updates [<a class="citation" href="references/bibliography.bib" title="lakshminarayanan2014mondrian">lakshminarayanan2014mondrian</a>].</p>
+<p>The core algorithmic idea is variance control through decorrelation. A single deep tree has low bias and high variance. An average of many decorrelated trees keeps much of the low bias while reducing variance. The decorrelation can come from bootstrap sampling, feature subsampling, randomized thresholds, transformed feature spaces, or stochastic partition processes.</p>
+<p>Random forests also support statistical extensions because a forest can be read as an adaptive local weighting scheme. This interpretation underlies confidence intervals, quantile estimates, causal forests, and generalized forests [<a class="citation" href="references/bibliography.bib" title="wager2014rfci">wager2014rfci</a>; <a class="citation" href="references/bibliography.bib" title="mentch2016uncertainty">mentch2016uncertainty</a>; <a class="citation" href="references/bibliography.bib" title="meinshausen2006quantile">meinshausen2006quantile</a>; <a class="citation" href="references/bibliography.bib" title="wager2018causalforest">wager2018causalforest</a>; <a class="citation" href="references/bibliography.bib" title="athey2019grf">athey2019grf</a>].</p>
+<h2 id="boosted-decision-trees">Boosted Decision Trees</h2>
+<p>Boosted decision trees are tree ensembles built sequentially. Each new tree is fit to emphasize the examples or residuals not handled well by previous trees. The algorithmic object is still an additive ensemble of trees.</p>
+<p>AdaBoost gave the first iconic boosting procedure: repeatedly fit weak classifiers, reweight examples, and combine the weak learners into a strong classifier [<a class="citation" href="references/bibliography.bib" title="schapire1990strength">schapire1990strength</a>; <a class="citation" href="references/bibliography.bib" title="freund1997adaboost">freund1997adaboost</a>]. When the weak learner is a decision stump or shallow decision tree, the resulting model is a boosted tree ensemble. Gradient boosting generalized this idea by viewing boosting as functional gradient descent: each tree approximates a descent direction in function space [<a class="citation" href="references/bibliography.bib" title="mason1999gradientboost">mason1999gradientboost</a>; <a class="citation" href="references/bibliography.bib" title="friedman2001gbm">friedman2001gbm</a>]. Stochastic gradient boosting added subsampling to improve regularization and computation [<a class="citation" href="references/bibliography.bib" title="friedman2002stochastic">friedman2002stochastic</a>]. Tutorials and comparative surveys clarify how loss, learning rate, tree depth, subsampling, and early stopping interact [<a class="citation" href="references/bibliography.bib" title="natekin2013tutorial">natekin2013tutorial</a>; <a class="citation" href="references/bibliography.bib" title="bentejac2021comparative">bentejac2021comparative</a>].</p>
+<p>Algorithmically, boosted trees differ from random forests in their error strategy:</p>
+<div class="table-wrap"><table><thead><tr><th>Ensemble</th><th>Training order</th><th>Main effect</th></tr></thead><tbody><tr><td>Bagged trees</td><td>Independent trees</td><td>Variance reduction</td></tr><tr><td>Random forests</td><td>Independent randomized trees</td><td>Variance reduction with decorrelation</td></tr><tr><td>ExtraTrees</td><td>Independent highly randomized trees</td><td>More decorrelation, sometimes more bias</td></tr><tr><td>Boosted trees</td><td>Sequential additive trees</td><td>Bias reduction and functional optimization</td></tr></tbody></table></div>
+<p>Boosted trees are powerful but sensitive to regularization. Learning rate, number of trees, tree depth, leaf size, subsampling, and loss function determine whether the ensemble is a smooth additive approximation or an overfit sequence of corrections.</p>
+<h2 id="optimal-and-sparse-trees">Optimal and Sparse Trees</h2>
+<p>The exact decision-tree problem is hard. Hyafil and Rivest proved that constructing an optimal binary decision tree is NP-complete [<a class="citation" href="references/bibliography.bib" title="hyafil1976npcomplete">hyafil1976npcomplete</a>]. The consequence is not that optimal trees are hopeless. It is that exact algorithms must exploit structure, bounds, discretization, caching, or restricted objectives.</p>
+<p>Modern optimal-tree algorithms use several strategies:</p>
+<div class="table-wrap"><table><thead><tr><th>Strategy</th><th>Examples</th><th>Basic idea</th></tr></thead><tbody><tr><td>Mixed-integer optimization</td><td>OCT, MIP formulations</td><td>Encode split choices and leaf assignments as an optimization problem</td></tr><tr><td>SAT and MaxSAT</td><td>SAT-based optimal trees</td><td>Encode tree consistency and objective constraints logically</td></tr><tr><td>Dynamic programming</td><td>MurTree and related methods</td><td>Reuse subproblem solutions over feature subsets and label states</td></tr><tr><td>Branch-and-bound</td><td>DL8.5, OSDT, GOSDT</td><td>Search the tree space with lower bounds and pruning</td></tr><tr><td>Sparse objectives</td><td>OSDT, GOSDT</td><td>Penalize leaves or depth to find compact accurate trees</td></tr></tbody></table></div>
+<p>OCT made modern optimization-based trees highly visible [<a class="citation" href="references/bibliography.bib" title="bertsimas2017oct">bertsimas2017oct</a>]. MIP formulations, SAT encodings, OSDT, GOSDT, DL8.5, and MurTree then pushed different parts of the scalability and optimality frontier [<a class="citation" href="references/bibliography.bib" title="verwer2019mip">verwer2019mip</a>; <a class="citation" href="references/bibliography.bib" title="narodytska2018sat">narodytska2018sat</a>; <a class="citation" href="references/bibliography.bib" title="hu2019osdt">hu2019osdt</a>; <a class="citation" href="references/bibliography.bib" title="lin2020gosdt">lin2020gosdt</a>; <a class="citation" href="references/bibliography.bib" title="aglin2020dl85">aglin2020dl85</a>; <a class="citation" href="references/bibliography.bib" title="demirovic2022murtree">demirovic2022murtree</a>]. Recent work extends the same basic question to nonlinear metrics, pruning, survival objectives, quantile objectives, and hypersurface splits [<a class="citation" href="references/bibliography.bib" title="demirovic2020nonlinear">demirovic2020nonlinear</a>; <a class="citation" href="references/bibliography.bib" title="bertsimas2022survival">bertsimas2022survival</a>; <a class="citation" href="references/bibliography.bib" title="harviainen2025pruning">harviainen2025pruning</a>; <a class="citation" href="references/bibliography.bib" title="odtquantile2026">odtquantile2026</a>; <a class="citation" href="references/bibliography.bib" title="he2025hodt">he2025hodt</a>].</p>
+<p>The right use case is not maximum-scale prediction. It is small, sparse, auditable prediction where the tree itself is the final artifact and the cost of global search is justified by the value of a compact model.</p>
+<h2 id="target-specific-trees">Target-Specific Trees</h2>
+<p>Many important tree algorithms change the split criterion to match a statistical target.</p>
+<p>Quantile regression forests estimate conditional distributions rather than only conditional means [<a class="citation" href="references/bibliography.bib" title="meinshausen2006quantile">meinshausen2006quantile</a>]. Random survival forests adapt tree ensembles to right-censored time-to-event outcomes [<a class="citation" href="references/bibliography.bib" title="ishwaran2008rsf">ishwaran2008rsf</a>]. Causal trees and causal forests split to expose treatment-effect heterogeneity rather than ordinary predictive accuracy [<a class="citation" href="references/bibliography.bib" title="athey2016causaltrees">athey2016causaltrees</a>; <a class="citation" href="references/bibliography.bib" title="wager2018causalforest">wager2018causalforest</a>]. Generalized random forests extend the same local weighting idea to broader estimating-equation targets [<a class="citation" href="references/bibliography.bib" title="athey2019grf">athey2019grf</a>]. Isolation forests invert the usual supervised framing: anomalies are points that are isolated quickly by random splits [<a class="citation" href="references/bibliography.bib" title="liu2008isolation">liu2008isolation</a>; <a class="citation" href="references/bibliography.bib" title="liu2012isolation">liu2012isolation</a>].</p>
+<p>These algorithms are not small variations on CART. Their split criteria, estimation targets, and validation logic are different. A survival tree should not be evaluated like an ordinary regression tree, and a causal tree should not be judged only by predictive accuracy.</p>
+<h2 id="streaming-trees">Streaming Trees</h2>
+<p>Streaming tree algorithms address the case where data arrive over time and the tree cannot be rebuilt from scratch after every example. The central tool is a statistical bound that decides when enough evidence has accumulated to commit to a split.</p>
+<p>The Very Fast Decision Tree algorithm uses the Hoeffding bound to choose splits from streaming data [<a class="citation" href="references/bibliography.bib" title="domingos2000vfdt">domingos2000vfdt</a>]. CVFDT adapts this idea to changing data streams by maintaining alternate subtrees when drift is detected [<a class="citation" href="references/bibliography.bib" title="hulten2001cva">hulten2001cva</a>]. ADWIN supplies an adaptive-window drift detector [<a class="citation" href="references/bibliography.bib" title="bifet2007adwin">bifet2007adwin</a>]. Adaptive random forests combine streaming trees with ensemble logic and drift handling [<a class="citation" href="references/bibliography.bib" title="gomes2017arf">gomes2017arf</a>].</p>
+<p>Streaming trees make the trade-off explicit: the algorithm sacrifices full-batch optimality for incremental updates, memory bounds, and adaptation to drift. That is a real algorithmic regime, not just a faster implementation of batch CART.</p>
+<h2 id="current-algorithmic-picture">Current Algorithmic Picture</h2>
+<p>The current state of decision tree algorithms can be summarized as follows:</p>
+<div class="table-wrap"><table><thead><tr><th>Need</th><th>Algorithmic family to study first</th></tr></thead><tbody><tr><td>A readable single model</td><td>CART, C4.5, GUIDE, conditional inference trees</td></tr><tr><td>A compact globally searched model</td><td>OSDT, GOSDT, DL8.5, MurTree, OCT</td></tr><tr><td>Low-variance prediction</td><td>Bagging, random forests, ExtraTrees</td></tr><tr><td>Additive predictive power</td><td>AdaBoost with stumps, gradient boosted trees, stochastic gradient boosting</td></tr><tr><td>Large-scale tree induction</td><td>SLIQ, SPRINT, RainForest, PUBLIC, BOAT</td></tr><tr><td>Online learning</td><td>VFDT, CVFDT, adaptive random forests</td></tr><tr><td>Censored outcomes</td><td>Survival trees and random survival forests</td></tr><tr><td>Treatment-effect heterogeneity</td><td>Causal trees and generalized random forests</td></tr><tr><td>Conditional distributions</td><td>Quantile regression forests</td></tr><tr><td>Anomaly detection</td><td>Isolation forests</td></tr></tbody></table></div>
+<p>For a literature-review repository, the most useful emphasis is the evolution of the induction problem itself:</p>
+<p>1. Greedy split selection made trees practical.</p>
+<p>2. Pruning made individual trees less brittle.</p>
+<p>3. Randomization and averaging made trees stable.</p>
+<p>4. Sequential additive fitting made tree ensembles highly accurate.</p>
+<p>5. Exact optimization made small trees more faithful to a global objective.</p>
+<p>6. Target-specific criteria turned trees into tools for survival, causal, streaming, quantile, and anomaly problems.</p>
+<h2 id="demo-notebook-plan">Demo Notebook Plan</h2>
+<p>The notebooks should teach algorithmic mechanics rather than package features:</p>
+<div class="table-wrap"><table><thead><tr><th>Notebook</th><th>Algorithmic focus</th></tr></thead><tbody><tr><td><code>01_classical_cart_pruning.ipynb</code></td><td>CART growth, impurity, depth control, and cost-complexity pruning</td></tr><tr><td><code>02_ensembles_random_forest_boosting.ipynb</code></td><td>Bagging, random forests, ExtraTrees, and boosted decision trees</td></tr><tr><td><code>03_split_criteria_id3_cart.ipynb</code></td><td>Entropy, information gain, gain ratio, Gini impurity, and threshold search</td></tr><tr><td><code>04_hoeffding_tree_stream_demo.ipynb</code></td><td>Hoeffding-bound split decisions for streaming tree induction</td></tr></tbody></table></div>
+<h2 id="open-problems">Open Problems</h2>
+<p>Several algorithmic questions remain active:</p>
+<p>1. How far can exact sparse-tree algorithms scale without losing their global optimality guarantees?</p>
+<p>2. Which split criteria best balance selection bias, statistical power, and computational cost for mixed continuous and categorical data?</p>
+<p>3. Can oblique and model trees become easier to optimize while staying readable?</p>
+<p>4. How should optimal-tree methods handle missing values, monotonic constraints, fairness constraints, and censored outcomes in one coherent objective?</p>
+<p>5. Can uncertainty estimates for forests become reliable enough for routine decision-making?</p>
+<p>6. Can streaming trees adapt to drift without constantly replacing useful old structure?</p>
+<p>7. Which pruning objectives best predict human auditability, not just test error?</p>
+<p>The field is mature because the basic recursive-partitioning idea is old. It is still active because each real constraint - scale, interpretability, streaming, causality, censoring, sparsity, and global optimality - changes the tree construction problem in a substantive way.</p>
+    </article>
+  </main>
+  <footer>
+    <div class="wrap">
+      Generated from <code>deep-research-report.md</code>. Bibliography:
+      <a href="references/bibliography.bib">references/bibliography.bib</a>.
+    </div>
+  </footer>
+</body>
+</html>

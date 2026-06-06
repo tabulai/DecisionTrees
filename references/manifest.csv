@@ -1,0 +1,106 @@
+id,title,authors,year,venue,topic,url
+morgan1963aid,"Problems in the analysis of survey data, and a proposal",James N. Morgan and John A. Sonquist,1963,Journal of the American Statistical Association,classical,https://doi.org/10.1080/01621459.1963.10500855
+hunt1966experiments,Experiments in Induction,"Earl B. Hunt, Janet Marin, and Philip J. Stone",1966,Academic Press,classical,https://archive.org/details/experimentsinind0000hunt
+hyafil1976npcomplete,Constructing optimal binary decision trees is NP-complete,Laurent Hyafil and Ronald L. Rivest,1976,Information Processing Letters,theory,https://doi.org/10.1016/0020-0190(76)90017-1
+quinlan1979discovering,Discovering rules by induction from large collections of examples,J. Ross Quinlan,1979,Expert Systems in the Micro Electronic Age,classical,https://apps.dtic.mil/sti/citations/ADA078885
+kass1980chaid,An Exploratory Technique for Investigating Large Quantities of Categorical Data,Gordon V. Kass,1980,Applied Statistics,classical,https://doi.org/10.2307/2986296
+breiman1984cart,Classification and Regression Trees,"Leo Breiman, Jerome H. Friedman, Richard A. Olshen, and Charles J. Stone",1984,Wadsworth,classical,https://doi.org/10.1201/9781315139470
+quinlan1986id3,Induction of Decision Trees,J. Ross Quinlan,1986,Machine Learning,classical,https://doi.org/10.1007/BF00116251
+quinlan1987simplifying,Simplifying decision trees,J. Ross Quinlan,1987,International Journal of Man-Machine Studies,classical,https://doi.org/10.1016/S0020-7373(87)80053-6
+quinlan1989mdl,Inferring decision trees using the minimum description length principle,J. Ross Quinlan and Ronald L. Rivest,1989,Information and Computation,classical,https://doi.org/10.1016/0890-5401(89)90010-2
+mingers1989empirical,An empirical comparison of pruning methods for decision tree induction,John Mingers,1989,Machine Learning,pruning,https://doi.org/10.1023/A:1022604100933
+blumer1989learnability,Learnability and the Vapnik-Chervonenkis dimension,"Anselm Blumer, Andrzej Ehrenfeucht, David Haussler, and Manfred K. Warmuth",1989,Journal of the ACM,theory,https://doi.org/10.1145/76359.76371
+schapire1990strength,The strength of weak learnability,Robert E. Schapire,1990,Machine Learning,boosting,https://doi.org/10.1007/BF00116037
+quinlan1992m5,Learning with continuous classes,J. Ross Quinlan,1992,AI 92,regression-tree,https://www.researchgate.net/publication/2399182_Learning_with_Continuous_Classes
+quinlan1993c45,C4.5: Programs for Machine Learning,J. Ross Quinlan,1993,Morgan Kaufmann,classical,https://archive.org/details/c45programsforma0000quin
+murthy1994oc1,A system for induction of oblique decision trees,"Sreerama K. Murthy, Simon Kasif, and Steven Salzberg",1994,Journal of Artificial Intelligence Research,classical,https://doi.org/10.1613/jair.63
+breiman1996bias,Technical note: Some properties of splitting criteria,Leo Breiman,1996,Machine Learning,classical,https://doi.org/10.1023/A:1018054023596
+quinlan1996continuous,Improved Use of Continuous Attributes in C4.5,J. Ross Quinlan,1996,Journal of Artificial Intelligence Research,classical,https://arxiv.org/abs/cs/9603103
+breiman1996arcing,Arcing classifiers,Leo Breiman,1996,The Annals of Statistics,ensemble,https://doi.org/10.1214/aos/1031594726
+breiman1996bagging,Bagging predictors,Leo Breiman,1996,Machine Learning,ensemble,https://doi.org/10.1007/BF00058655
+mehta1996sliq,SLIQ: A Fast Scalable Classifier for Data Mining,"Manish Mehta, Rakesh Agrawal, and Jorma Rissanen",1996,EDBT,scalable-tree,https://dl.acm.org/doi/10.5555/645337.650382
+milosavljevic1996tree,Discovering Decision Trees in a Distributed Environment,Aleksandar Milosavljevic,1996,KDD,scalable-tree,https://dl.acm.org/doi/10.5555/3001460.3001497
+shafer1996sprint,SPRINT: A Scalable Parallel Classifier for Data Mining,"John C. Shafer, Rakesh Agrawal, and Manish Mehta",1996,VLDB,scalable-tree,https://www.vldb.org/conf/1996/P544.PDF
+freund1997adaboost,A decision-theoretic generalization of on-line learning and an application to boosting,Yoav Freund and Robert E. Schapire,1997,Journal of Computer and System Sciences,boosting,https://doi.org/10.1006/jcss.1997.1504
+loh1997quest,Split selection methods for classification trees,Wei-Yin Loh and Yu-Shan Shih,1997,Statistica Sinica,classical,https://www3.stat.sinica.edu.tw/statistica/J7N4/J7N41/J7N41.htm
+therneau1997survivaltrees,An Introduction to Recursive Partitioning Using the RPART Routines,Terry M. Therneau and Elizabeth J. Atkinson,1997,Mayo Clinic Technical Report,classical,https://cran.r-project.org/web/packages/rpart/vignettes/longintro.pdf
+esposito1997surveypruning,A comparative analysis of methods for pruning decision trees,"Floriana Esposito, Donato Malerba, and Giovanni Semeraro",1997,IEEE Transactions on Pattern Analysis and Machine Intelligence,pruning,https://doi.org/10.1109/34.589207
+mansour1997pessimistic,Pessimistic decision tree pruning based on tree size,Yishay Mansour,1997,ICML,pruning,https://dl.acm.org/doi/10.5555/645526.657136
+wang1997m5prime,Inducing Model Trees for Continuous Classes,Yong Wang and Ian H. Witten,1997,Poster Papers of ECML 1997,regression-tree,https://hdl.handle.net/10289/1183
+chipman1998bayesiancart,Bayesian CART model search,"Hugh A. Chipman, Edward I. George, and Robert E. McCulloch",1998,Journal of the American Statistical Association,bayesian-tree,https://doi.org/10.1080/01621459.1998.10473750
+gehrke1998rainforest,RainForest: A Framework for Fast Decision Tree Construction of Large Datasets,"Johannes Gehrke, Raghu Ramakrishnan, and Venkatesh Ganti",1998,VLDB,scalable-tree,https://www.vldb.org/conf/1998/p416.pdf
+rastogi1998public,PUBLIC: A Decision Tree Classifier that Integrates Building and Pruning,Rajeev Rastogi and Kyuseok Shim,1998,VLDB,scalable-tree,https://www.vldb.org/conf/1998/p404.pdf
+mason1999gradientboost,Boosting algorithms as gradient descent,"Llew Mason, Jonathan Baxter, Peter Bartlett, and Marcus Frean",1999,NeurIPS,boosting,https://papers.nips.cc/paper/1999/hash/96a93ba89a5b5c6c226e49b88973f46e-Abstract.html
+bauer1999empirical,"An empirical comparison of voting classification algorithms: Bagging, boosting, and variants",Eric Bauer and Ron Kohavi,1999,Machine Learning,ensemble,https://doi.org/10.1023/A:1007515423169
+gehrke1999boat,BOAT: Optimistic Decision Tree Construction,"Johannes Gehrke, Venkatesh Ganti, Raghu Ramakrishnan, and Wei-Yin Loh",1999,SIGMOD,scalable-tree,https://doi.org/10.1145/304182.304212
+kearns1999boostingtrees,On the Boosting Ability of Top-Down Decision Tree Learning Algorithms,Michael Kearns and Yishay Mansour,1999,Journal of Computer and System Sciences,theory,https://doi.org/10.1006/jcss.1999.1612
+lim2000comparison,"A comparison of prediction accuracy, complexity, and training time of thirty-three old and new classification algorithms","Tjen-Sien Lim, Wei-Yin Loh, and Yu-Shan Shih",2000,Machine Learning,benchmark,https://doi.org/10.1023/A:1007608224229
+domingos2000vfdt,Mining high-speed data streams,Pedro Domingos and Geoff Hulten,2000,KDD,streaming-tree,https://doi.org/10.1145/347090.347107
+dietterich2000ensemble,Ensemble methods in machine learning,Thomas G. Dietterich,2000,Multiple Classifier Systems,survey,https://doi.org/10.1007/3-540-45014-9_1
+friedman2001gbm,Greedy function approximation: A gradient boosting machine,Jerome H. Friedman,2001,The Annals of Statistics,boosting,https://doi.org/10.1214/aos/1013203451
+breiman2001randomforests,Random Forests,Leo Breiman,2001,Machine Learning,ensemble,https://doi.org/10.1023/A:1010933404324
+breiman2001twocultures,Statistical Modeling: The Two Cultures,Leo Breiman,2001,Statistical Science,interpretability,https://doi.org/10.1214/ss/1009213726
+hulten2001cva,Mining time-changing data streams,"Geoff Hulten, Laurie Spencer, and Pedro Domingos",2001,KDD,streaming-tree,https://doi.org/10.1145/502512.502529
+friedman2002stochastic,Stochastic gradient boosting,Jerome H. Friedman,2002,Computational Statistics & Data Analysis,boosting,https://doi.org/10.1016/S0167-9473(01)00065-2
+loh2002guide,Regression trees with unbiased variable selection and interaction detection,Wei-Yin Loh,2002,Statistica Sinica,classical,https://www3.stat.sinica.edu.tw/statistica/j12n2/j12n24/j12n24.htm
+liaw2002randomforest,Classification and Regression by randomForest,Andy Liaw and Matthew Wiener,2002,R News,ensemble,https://journal.r-project.org/articles/RN-2002-022/
+landwehr2005lmt,Logistic Model Trees,"Niels Landwehr, Mark Hall, and Eibe Frank",2005,Machine Learning,classical,https://doi.org/10.1007/s10994-005-0466-3
+hothorn2006ctree,Unbiased recursive partitioning: A conditional inference framework,"Torsten Hothorn, Kurt Hornik, and Achim Zeileis",2006,Journal of Computational and Graphical Statistics,classical,https://doi.org/10.1198/106186006X133933
+geurts2006extratrees,Extremely randomized trees,"Pierre Geurts, Damien Ernst, and Louis Wehenkel",2006,Machine Learning,ensemble,https://doi.org/10.1007/s10994-006-6226-1
+rodriguez2006rotation,Rotation Forest: A New Classifier Ensemble Method,"Juan J. Rodriguez, Ludmila I. Kuncheva, and Carlos J. Alonso",2006,IEEE Transactions on Pattern Analysis and Machine Intelligence,ensemble,https://doi.org/10.1109/TPAMI.2006.211
+meinshausen2006quantile,Quantile Regression Forests,Nicolai Meinshausen,2006,Journal of Machine Learning Research,specialized-forest,https://jmlr.org/papers/v7/meinshausen06a.html
+shi2007bestfirst,Best-first decision tree learning,Haijian Shi,2007,University of Waikato Technical Report,boosting,https://hdl.handle.net/10289/2317
+bifet2007adwin,Learning from time-changing data with adaptive windowing,Albert Bifet and Ricard Gavalda,2007,SIAM International Conference on Data Mining,streaming-tree,https://doi.org/10.1137/1.9781611972771.42
+liu2008isolation,Isolation Forest,"Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou",2008,ICDM,anomaly,https://doi.org/10.1109/ICDM.2008.17
+zeileis2008partykit,Model-based recursive partitioning,"Achim Zeileis, Torsten Hothorn, and Kurt Hornik",2008,Journal of Computational and Graphical Statistics,classical,https://doi.org/10.1198/106186008X319331
+ishwaran2008rsf,Random Survival Forests,"Hemant Ishwaran, Udaya B. Kogalur, Eugene H. Blackstone, and Michael S. Lauer",2008,The Annals of Applied Statistics,specialized-forest,https://doi.org/10.1214/08-AOAS169
+saffari2009onlineforests,Online random forests,"Amir Saffari, Christian Leistner, Jakob Santner, Martin Godec, and Horst Bischof",2009,ICCV Workshops,streaming-tree,https://doi.org/10.1109/ICCVW.2009.5457447
+chipman2010bart,BART: Bayesian additive regression trees,"Hugh A. Chipman, Edward I. George, and Robert E. McCulloch",2010,The Annals of Applied Statistics,bayesian-tree,https://doi.org/10.1214/09-AOAS285
+bifet2010leveraging,Leveraging Bagging for Evolving Data Streams,"Albert Bifet, Geoffrey Holmes, and Bernhard Pfahringer",2010,ECML PKDD,streaming-tree,https://doi.org/10.1007/978-3-642-15880-3_3
+rokach2010ensemble,Ensemble-based classifiers,Lior Rokach,2010,Artificial Intelligence Review,survey,https://doi.org/10.1007/s10462-009-9124-7
+tyree2011parallel,Parallel boosted regression trees for web search ranking,"Stephen Tyree, Kilian Q. Weinberger, Kunal Agrawal, and Jennifer Paykin",2011,WWW,boosting,https://doi.org/10.1145/1963405.1963487
+ikonomovska2011modeltrees,Learning model trees from evolving data streams,"Elena Ikonomovska, Joao Gama, and Saso Dzeroski",2011,Data Mining and Knowledge Discovery,streaming-tree,https://doi.org/10.1007/s10618-010-0201-y
+liu2012isolation,Isolation-based anomaly detection,"Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou",2012,ACM Transactions on Knowledge Discovery from Data,anomaly,https://doi.org/10.1145/2133360.2133363
+green2012bart,Modeling heterogeneous treatment effects in survey experiments with Bayesian additive regression trees,Donald P. Green and Holger L. Kern,2012,Public Opinion Quarterly,bayesian-tree,https://doi.org/10.1093/poq/nfs036
+cutler2012randomforests,Random Forests for Classification in Ecology,"D. Richard Cutler, Thomas C. Edwards Jr., Karen H. Beard, Adele Cutler, Kyle T. Hess, Jacob Gibson, and Joshua J. Lawler",2012,Ecology,ensemble,https://doi.org/10.1890/07-0539.1
+barros2012evolutionary,A survey of evolutionary algorithms for decision-tree induction,"Rodrigo C. Barros, Marcio P. Basgalupp, Andre C. P. L. F. de Carvalho, and Alex A. Freitas",2012,"IEEE Transactions on Systems, Man, and Cybernetics, Part C",survey,https://doi.org/10.1109/TSMCC.2011.2157494
+natekin2013tutorial,"Gradient boosting machines, a tutorial",Alexey Natekin and Alois Knoll,2013,Frontiers in Neurorobotics,boosting,https://doi.org/10.3389/fnbot.2013.00021
+kotsiantis2013overview,Decision trees: a recent overview,Sotiris B. Kotsiantis,2013,Artificial Intelligence Review,survey,https://doi.org/10.1007/s10462-011-9272-4
+lakshminarayanan2014mondrian,Mondrian Forests: Efficient Online Random Forests,"Balaji Lakshminarayanan, Daniel M. Roy, and Yee Whye Teh",2014,NeurIPS,ensemble,https://papers.nips.cc/paper/2014/hash/195c9c0797f42473f2c2f922c4cf52cf-Abstract.html
+wager2014rfci,Confidence intervals for random forests: The jackknife and the infinitesimal jackknife,"Stefan Wager, Trevor Hastie, and Bradley Efron",2014,Journal of Machine Learning Research,uncertainty,https://jmlr.org/papers/v15/wager14a.html
+scornet2015consistency,Consistency of random forests,"Erwan Scornet, Gerard Biau, and Jean-Philippe Vert",2015,The Annals of Statistics,theory,https://doi.org/10.1214/15-AOS1321
+sparapani2016nonparametric,Nonparametric survival analysis using Bayesian additive regression trees,"Rodney Sparapani, Brent R. Logan, Robert E. McCulloch, and Purushottam W. Laud",2016,Statistics in Medicine,bayesian-tree,https://doi.org/10.1002/sim.6893
+athey2016causaltrees,Recursive partitioning for heterogeneous causal effects,Susan Athey and Guido Imbens,2016,Proceedings of the National Academy of Sciences,causal-forest,https://doi.org/10.1073/pnas.1510489113
+biau2016guided,A random forest guided tour,Gerard Biau and Erwan Scornet,2016,TEST,survey,https://doi.org/10.1007/s11749-016-0481-7
+mentch2016randomization,Quantifying uncertainty in random forests via local neighborhoods,Lucas Mentch and Giles Hooker,2016,arXiv,uncertainty,https://arxiv.org/abs/1604.01184
+mentch2016uncertainty,Quantifying uncertainty in random forests via confidence intervals and hypothesis tests,Lucas Mentch and Giles Hooker,2016,Journal of Machine Learning Research,uncertainty,https://jmlr.org/papers/v17/14-168.html
+tomita2017randomer,Randomer Forests,"Tyler M. Tomita, James Browne, Cencheng Shen, Jaewon Chung, et al.",2017,Journal of Machine Learning Research,ensemble,https://jmlr.org/papers/v18/16-389.html
+bertsimas2017oct,Optimal classification trees,Dimitris Bertsimas and Jack Dunn,2017,Machine Learning,optimal-tree,https://doi.org/10.1007/s10994-017-5633-9
+gomes2017arf,Adaptive random forests for evolving data stream classification,"Heitor M. Gomes, Albert Bifet, Jesse Read, Jean Paul Barddal, Fabricio Enembreck, Bernhard Pfahringer, Geoff Holmes, and Talel Abdessalem",2017,Machine Learning,streaming-tree,https://doi.org/10.1007/s10994-017-5642-8
+wager2018causalforest,Estimation and Inference of Heterogeneous Treatment Effects using Random Forests,Stefan Wager and Susan Athey,2018,Journal of the American Statistical Association,causal-forest,https://doi.org/10.1080/01621459.2017.1319839
+narodytska2018sat,Learning optimal decision trees with SAT,"Nina Narodytska, Alexey Ignatiev, Filipe Pereira, and Joao Marques-Silva",2018,IJCAI,optimal-tree,https://doi.org/10.24963/ijcai.2018/189
+athey2019grf,Generalized Random Forests,"Susan Athey, Julie Tibshirani, and Stefan Wager",2019,The Annals of Statistics,causal-forest,https://doi.org/10.1214/18-AOS1709
+aghaei2019fairtrees,Learning optimal and fair decision trees for non-discriminative decision-making,"Sina Aghaei, Mohammad Javad Azizi, and Phebe Vayanos",2019,AAAI,fairness,https://doi.org/10.1609/aaai.v33i01.33011418
+bertsimas2019lens,Machine Learning under a Modern Optimization Lens,Dimitris Bertsimas and Jack Dunn,2019,Dynamic Ideas,optimal-tree,https://www.dynamic-ideas.com/books/machine-learning-under-a-modern-optimization-lens
+hu2019osdt,Optimal Sparse Decision Trees,"Xiyang Hu, Cynthia Rudin, and Margo Seltzer",2019,NeurIPS,optimal-tree,https://papers.nips.cc/paper/2019/hash/ac52c626afc10d4075708ac4c778ddfc-Abstract.html
+verwer2019mip,Learning optimal classification trees using a binary linear program formulation,Sicco Verwer and Yingqian Zhang,2019,Artificial Intelligence,optimal-tree,https://doi.org/10.1016/j.artint.2018.11.002
+pratola2020heteroscedasticbart,Heteroscedastic BART via multiplicative regression trees,"Matthew T. Pratola, Hugh A. Chipman, Edward I. George, and Robert E. McCulloch",2020,Journal of Computational and Graphical Statistics,bayesian-tree,https://doi.org/10.1080/10618600.2019.1677243
+aglin2020dl85,Learning Optimal Decision Trees Using Caching Branch-and-Bound Search,"Gael Aglin, Siegfried Nijssen, and Pierre Schaus",2020,AAAI,optimal-tree,https://doi.org/10.1609/aaai.v34i04.5711
+demirovic2020nonlinear,Optimal Decision Trees for Nonlinear Metrics,Emir Demirovic and Peter J. Stuckey,2020,arXiv,optimal-tree,https://arxiv.org/abs/2009.06921
+lin2020gosdt,Generalized and Scalable Optimal Sparse Decision Trees,"Jimmy Lin, Chudi Zhong, Diane Hu, Cynthia Rudin, and Margo Seltzer",2020,ICML,optimal-tree,https://proceedings.mlr.press/v119/lin20g.html
+nie2021rloss,Quasi-oracle estimation of heterogeneous treatment effects,Xinkun Nie and Stefan Wager,2021,Biometrika,causal-forest,https://doi.org/10.1093/biomet/asaa076
+bentejac2021comparative,A comparative analysis of gradient boosting algorithms,"Candice Bentejac, Anna Csorgo, and Gonzalo Martinez-Munoz",2021,Artificial Intelligence Review,survey,https://doi.org/10.1007/s10462-020-09896-5
+bertsimas2022survival,Optimal survival trees,"Dimitris Bertsimas, Jack Dunn, Emma Gibson, and Agni Orfanoudaki",2022,Machine Learning,optimal-tree,https://doi.org/10.1007/s10994-021-06117-0
+demirovic2022murtree,MurTree: optimal decision trees via dynamic programming and search,"Emir Demirovic, Anna Lukina, Emmanuel Hebrard, Jeffrey Chan, James Bailey, Christopher Leckie, Kotagiri Ramamohanarao, and Peter J. Stuckey",2022,Journal of Machine Learning Research,optimal-tree,https://jmlr.org/papers/v23/20-520.html
+chen2023optpolicy,Fast Optimization of Weighted Sparse Decision Trees for use in Optimal Treatment Regimes and Optimal Policy Design,"Chaofan Chen, Cynthia Rudin, and Margo Seltzer",2023,Journal of Machine Learning Research,optimal-tree,https://pmc.ncbi.nlm.nih.gov/articles/PMC10039433/
+eiben2023parameterized,Parameterized Complexity of Learning Small Decision Trees,"Eduard Eiben, Robert Ganian, Thekla Hamm, and Sebastian Ordyniak",2023,Artificial Intelligence,optimal-tree,https://doi.org/10.1016/j.artint.2022.103844
+costa2023recent,Recent advances in decision trees: an updated survey,Vinicius G. Costa and Carlos E. Pedreira,2023,Artificial Intelligence Review,survey,https://doi.org/10.1007/s10462-022-10275-5
+demirovic2023responsible,Decision trees: from efficient prediction to responsible AI,Emir Demirovic and Peter J. Stuckey,2023,Frontiers in Artificial Intelligence,survey,https://doi.org/10.3389/frai.2023.1124553
+eisenburger2024labelnoise,Training Gradient Boosted Decision Trees on Tabular Data Containing Label Noise for Classification Tasks,"Anita Eisenburger, Daniel Otten, Anselm Hudde, and Frank Hopfgartner",2024,arXiv,boosting,https://arxiv.org/abs/2409.08647
+yildiz2024medicalgbdt,Gradient Boosting Decision Trees on Medical Diagnosis over Tabular Data,A. Yarkin Yildiz and Asli Kalayci,2024,arXiv,boosting,https://arxiv.org/abs/2410.03705
+huang2024rlf,Riemann-Lebesgue Forest for Regression,Wei-Min Huang and Tian Qin,2024,arXiv,ensemble,https://arxiv.org/abs/2402.04550
+charbuty2024survey,"A Survey of Decision Trees: Concepts, Algorithms, and Applications",Bahar Charbuty and Adnan Abdulazeez,2024,IEEE Access,survey,https://doi.org/10.1109/ACCESS.2024.3416838
+jayawardhana2025llmboost,Transformers Boost the Performance of Decision Trees on Tabular Data across Sample Sizes,"Mayuka Jayawardhana, Renbo, Samuel Dooley, Valeriia Cherepanova, Andrew Gordon Wilson, Frank Hutter, Colin White, Tom Goldstein, and Micah Goldblum",2025,arXiv,boosting,https://arxiv.org/abs/2502.02672
+harviainen2025pruning,Optimal Decision Tree Pruning Revisited: Algorithms and Complexity,"Juha Harviainen, Frank Sommer, Manuel Sorge, and Stefan Szeider",2025,arXiv,optimal-tree,https://arxiv.org/abs/2503.03576
+he2025hodt,Foundational theory for optimal decision tree problems. II. Optimal hypersurface decision tree algorithm,Xi He,2025,arXiv,optimal-tree,https://arxiv.org/abs/2509.12057
+odtquantile2026,Interpretable Quantile Regression by Optimal Decision Trees,"Valentin Lemaire, Gael Aglin, and Siegfried Nijssen",2026,arXiv,optimal-tree,https://arxiv.org/abs/2604.21042

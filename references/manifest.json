@@ -1,0 +1,951 @@
+{
+  "audit_date": "2026-06-06",
+  "count": 105,
+  "references": [
+    {
+      "id": "morgan1963aid",
+      "title": "Problems in the analysis of survey data, and a proposal",
+      "authors": "James N. Morgan and John A. Sonquist",
+      "year": "1963",
+      "venue": "Journal of the American Statistical Association",
+      "topic": "classical",
+      "url": "https://doi.org/10.1080/01621459.1963.10500855"
+    },
+    {
+      "id": "hunt1966experiments",
+      "title": "Experiments in Induction",
+      "authors": "Earl B. Hunt, Janet Marin, and Philip J. Stone",
+      "year": "1966",
+      "venue": "Academic Press",
+      "topic": "classical",
+      "url": "https://archive.org/details/experimentsinind0000hunt"
+    },
+    {
+      "id": "hyafil1976npcomplete",
+      "title": "Constructing optimal binary decision trees is NP-complete",
+      "authors": "Laurent Hyafil and Ronald L. Rivest",
+      "year": "1976",
+      "venue": "Information Processing Letters",
+      "topic": "theory",
+      "url": "https://doi.org/10.1016/0020-0190(76)90017-1"
+    },
+    {
+      "id": "quinlan1979discovering",
+      "title": "Discovering rules by induction from large collections of examples",
+      "authors": "J. Ross Quinlan",
+      "year": "1979",
+      "venue": "Expert Systems in the Micro Electronic Age",
+      "topic": "classical",
+      "url": "https://apps.dtic.mil/sti/citations/ADA078885"
+    },
+    {
+      "id": "kass1980chaid",
+      "title": "An Exploratory Technique for Investigating Large Quantities of Categorical Data",
+      "authors": "Gordon V. Kass",
+      "year": "1980",
+      "venue": "Applied Statistics",
+      "topic": "classical",
+      "url": "https://doi.org/10.2307/2986296"
+    },
+    {
+      "id": "breiman1984cart",
+      "title": "Classification and Regression Trees",
+      "authors": "Leo Breiman, Jerome H. Friedman, Richard A. Olshen, and Charles J. Stone",
+      "year": "1984",
+      "venue": "Wadsworth",
+      "topic": "classical",
+      "url": "https://doi.org/10.1201/9781315139470"
+    },
+    {
+      "id": "quinlan1986id3",
+      "title": "Induction of Decision Trees",
+      "authors": "J. Ross Quinlan",
+      "year": "1986",
+      "venue": "Machine Learning",
+      "topic": "classical",
+      "url": "https://doi.org/10.1007/BF00116251"
+    },
+    {
+      "id": "quinlan1987simplifying",
+      "title": "Simplifying decision trees",
+      "authors": "J. Ross Quinlan",
+      "year": "1987",
+      "venue": "International Journal of Man-Machine Studies",
+      "topic": "classical",
+      "url": "https://doi.org/10.1016/S0020-7373(87)80053-6"
+    },
+    {
+      "id": "quinlan1989mdl",
+      "title": "Inferring decision trees using the minimum description length principle",
+      "authors": "J. Ross Quinlan and Ronald L. Rivest",
+      "year": "1989",
+      "venue": "Information and Computation",
+      "topic": "classical",
+      "url": "https://doi.org/10.1016/0890-5401(89)90010-2"
+    },
+    {
+      "id": "mingers1989empirical",
+      "title": "An empirical comparison of pruning methods for decision tree induction",
+      "authors": "John Mingers",
+      "year": "1989",
+      "venue": "Machine Learning",
+      "topic": "pruning",
+      "url": "https://doi.org/10.1023/A:1022604100933"
+    },
+    {
+      "id": "blumer1989learnability",
+      "title": "Learnability and the Vapnik-Chervonenkis dimension",
+      "authors": "Anselm Blumer, Andrzej Ehrenfeucht, David Haussler, and Manfred K. Warmuth",
+      "year": "1989",
+      "venue": "Journal of the ACM",
+      "topic": "theory",
+      "url": "https://doi.org/10.1145/76359.76371"
+    },
+    {
+      "id": "schapire1990strength",
+      "title": "The strength of weak learnability",
+      "authors": "Robert E. Schapire",
+      "year": "1990",
+      "venue": "Machine Learning",
+      "topic": "boosting",
+      "url": "https://doi.org/10.1007/BF00116037"
+    },
+    {
+      "id": "quinlan1992m5",
+      "title": "Learning with continuous classes",
+      "authors": "J. Ross Quinlan",
+      "year": "1992",
+      "venue": "AI 92",
+      "topic": "regression-tree",
+      "url": "https://www.researchgate.net/publication/2399182_Learning_with_Continuous_Classes"
+    },
+    {
+      "id": "quinlan1993c45",
+      "title": "C4.5: Programs for Machine Learning",
+      "authors": "J. Ross Quinlan",
+      "year": "1993",
+      "venue": "Morgan Kaufmann",
+      "topic": "classical",
+      "url": "https://archive.org/details/c45programsforma0000quin"
+    },
+    {
+      "id": "murthy1994oc1",
+      "title": "A system for induction of oblique decision trees",
+      "authors": "Sreerama K. Murthy, Simon Kasif, and Steven Salzberg",
+      "year": "1994",
+      "venue": "Journal of Artificial Intelligence Research",
+      "topic": "classical",
+      "url": "https://doi.org/10.1613/jair.63"
+    },
+    {
+      "id": "breiman1996bias",
+      "title": "Technical note: Some properties of splitting criteria",
+      "authors": "Leo Breiman",
+      "year": "1996",
+      "venue": "Machine Learning",
+      "topic": "classical",
+      "url": "https://doi.org/10.1023/A:1018054023596"
+    },
+    {
+      "id": "quinlan1996continuous",
+      "title": "Improved Use of Continuous Attributes in C4.5",
+      "authors": "J. Ross Quinlan",
+      "year": "1996",
+      "venue": "Journal of Artificial Intelligence Research",
+      "topic": "classical",
+      "url": "https://arxiv.org/abs/cs/9603103"
+    },
+    {
+      "id": "breiman1996arcing",
+      "title": "Arcing classifiers",
+      "authors": "Leo Breiman",
+      "year": "1996",
+      "venue": "The Annals of Statistics",
+      "topic": "ensemble",
+      "url": "https://doi.org/10.1214/aos/1031594726"
+    },
+    {
+      "id": "breiman1996bagging",
+      "title": "Bagging predictors",
+      "authors": "Leo Breiman",
+      "year": "1996",
+      "venue": "Machine Learning",
+      "topic": "ensemble",
+      "url": "https://doi.org/10.1007/BF00058655"
+    },
+    {
+      "id": "mehta1996sliq",
+      "title": "SLIQ: A Fast Scalable Classifier for Data Mining",
+      "authors": "Manish Mehta, Rakesh Agrawal, and Jorma Rissanen",
+      "year": "1996",
+      "venue": "EDBT",
+      "topic": "scalable-tree",
+      "url": "https://dl.acm.org/doi/10.5555/645337.650382"
+    },
+    {
+      "id": "milosavljevic1996tree",
+      "title": "Discovering Decision Trees in a Distributed Environment",
+      "authors": "Aleksandar Milosavljevic",
+      "year": "1996",
+      "venue": "KDD",
+      "topic": "scalable-tree",
+      "url": "https://dl.acm.org/doi/10.5555/3001460.3001497"
+    },
+    {
+      "id": "shafer1996sprint",
+      "title": "SPRINT: A Scalable Parallel Classifier for Data Mining",
+      "authors": "John C. Shafer, Rakesh Agrawal, and Manish Mehta",
+      "year": "1996",
+      "venue": "VLDB",
+      "topic": "scalable-tree",
+      "url": "https://www.vldb.org/conf/1996/P544.PDF"
+    },
+    {
+      "id": "freund1997adaboost",
+      "title": "A decision-theoretic generalization of on-line learning and an application to boosting",
+      "authors": "Yoav Freund and Robert E. Schapire",
+      "year": "1997",
+      "venue": "Journal of Computer and System Sciences",
+      "topic": "boosting",
+      "url": "https://doi.org/10.1006/jcss.1997.1504"
+    },
+    {
+      "id": "loh1997quest",
+      "title": "Split selection methods for classification trees",
+      "authors": "Wei-Yin Loh and Yu-Shan Shih",
+      "year": "1997",
+      "venue": "Statistica Sinica",
+      "topic": "classical",
+      "url": "https://www3.stat.sinica.edu.tw/statistica/J7N4/J7N41/J7N41.htm"
+    },
+    {
+      "id": "therneau1997survivaltrees",
+      "title": "An Introduction to Recursive Partitioning Using the RPART Routines",
+      "authors": "Terry M. Therneau and Elizabeth J. Atkinson",
+      "year": "1997",
+      "venue": "Mayo Clinic Technical Report",
+      "topic": "classical",
+      "url": "https://cran.r-project.org/web/packages/rpart/vignettes/longintro.pdf"
+    },
+    {
+      "id": "esposito1997surveypruning",
+      "title": "A comparative analysis of methods for pruning decision trees",
+      "authors": "Floriana Esposito, Donato Malerba, and Giovanni Semeraro",
+      "year": "1997",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "topic": "pruning",
+      "url": "https://doi.org/10.1109/34.589207"
+    },
+    {
+      "id": "mansour1997pessimistic",
+      "title": "Pessimistic decision tree pruning based on tree size",
+      "authors": "Yishay Mansour",
+      "year": "1997",
+      "venue": "ICML",
+      "topic": "pruning",
+      "url": "https://dl.acm.org/doi/10.5555/645526.657136"
+    },
+    {
+      "id": "wang1997m5prime",
+      "title": "Inducing Model Trees for Continuous Classes",
+      "authors": "Yong Wang and Ian H. Witten",
+      "year": "1997",
+      "venue": "Poster Papers of ECML 1997",
+      "topic": "regression-tree",
+      "url": "https://hdl.handle.net/10289/1183"
+    },
+    {
+      "id": "chipman1998bayesiancart",
+      "title": "Bayesian CART model search",
+      "authors": "Hugh A. Chipman, Edward I. George, and Robert E. McCulloch",
+      "year": "1998",
+      "venue": "Journal of the American Statistical Association",
+      "topic": "bayesian-tree",
+      "url": "https://doi.org/10.1080/01621459.1998.10473750"
+    },
+    {
+      "id": "gehrke1998rainforest",
+      "title": "RainForest: A Framework for Fast Decision Tree Construction of Large Datasets",
+      "authors": "Johannes Gehrke, Raghu Ramakrishnan, and Venkatesh Ganti",
+      "year": "1998",
+      "venue": "VLDB",
+      "topic": "scalable-tree",
+      "url": "https://www.vldb.org/conf/1998/p416.pdf"
+    },
+    {
+      "id": "rastogi1998public",
+      "title": "PUBLIC: A Decision Tree Classifier that Integrates Building and Pruning",
+      "authors": "Rajeev Rastogi and Kyuseok Shim",
+      "year": "1998",
+      "venue": "VLDB",
+      "topic": "scalable-tree",
+      "url": "https://www.vldb.org/conf/1998/p404.pdf"
+    },
+    {
+      "id": "mason1999gradientboost",
+      "title": "Boosting algorithms as gradient descent",
+      "authors": "Llew Mason, Jonathan Baxter, Peter Bartlett, and Marcus Frean",
+      "year": "1999",
+      "venue": "NeurIPS",
+      "topic": "boosting",
+      "url": "https://papers.nips.cc/paper/1999/hash/96a93ba89a5b5c6c226e49b88973f46e-Abstract.html"
+    },
+    {
+      "id": "bauer1999empirical",
+      "title": "An empirical comparison of voting classification algorithms: Bagging, boosting, and variants",
+      "authors": "Eric Bauer and Ron Kohavi",
+      "year": "1999",
+      "venue": "Machine Learning",
+      "topic": "ensemble",
+      "url": "https://doi.org/10.1023/A:1007515423169"
+    },
+    {
+      "id": "gehrke1999boat",
+      "title": "BOAT: Optimistic Decision Tree Construction",
+      "authors": "Johannes Gehrke, Venkatesh Ganti, Raghu Ramakrishnan, and Wei-Yin Loh",
+      "year": "1999",
+      "venue": "SIGMOD",
+      "topic": "scalable-tree",
+      "url": "https://doi.org/10.1145/304182.304212"
+    },
+    {
+      "id": "kearns1999boostingtrees",
+      "title": "On the Boosting Ability of Top-Down Decision Tree Learning Algorithms",
+      "authors": "Michael Kearns and Yishay Mansour",
+      "year": "1999",
+      "venue": "Journal of Computer and System Sciences",
+      "topic": "theory",
+      "url": "https://doi.org/10.1006/jcss.1999.1612"
+    },
+    {
+      "id": "lim2000comparison",
+      "title": "A comparison of prediction accuracy, complexity, and training time of thirty-three old and new classification algorithms",
+      "authors": "Tjen-Sien Lim, Wei-Yin Loh, and Yu-Shan Shih",
+      "year": "2000",
+      "venue": "Machine Learning",
+      "topic": "benchmark",
+      "url": "https://doi.org/10.1023/A:1007608224229"
+    },
+    {
+      "id": "domingos2000vfdt",
+      "title": "Mining high-speed data streams",
+      "authors": "Pedro Domingos and Geoff Hulten",
+      "year": "2000",
+      "venue": "KDD",
+      "topic": "streaming-tree",
+      "url": "https://doi.org/10.1145/347090.347107"
+    },
+    {
+      "id": "dietterich2000ensemble",
+      "title": "Ensemble methods in machine learning",
+      "authors": "Thomas G. Dietterich",
+      "year": "2000",
+      "venue": "Multiple Classifier Systems",
+      "topic": "survey",
+      "url": "https://doi.org/10.1007/3-540-45014-9_1"
+    },
+    {
+      "id": "friedman2001gbm",
+      "title": "Greedy function approximation: A gradient boosting machine",
+      "authors": "Jerome H. Friedman",
+      "year": "2001",
+      "venue": "The Annals of Statistics",
+      "topic": "boosting",
+      "url": "https://doi.org/10.1214/aos/1013203451"
+    },
+    {
+      "id": "breiman2001randomforests",
+      "title": "Random Forests",
+      "authors": "Leo Breiman",
+      "year": "2001",
+      "venue": "Machine Learning",
+      "topic": "ensemble",
+      "url": "https://doi.org/10.1023/A:1010933404324"
+    },
+    {
+      "id": "breiman2001twocultures",
+      "title": "Statistical Modeling: The Two Cultures",
+      "authors": "Leo Breiman",
+      "year": "2001",
+      "venue": "Statistical Science",
+      "topic": "interpretability",
+      "url": "https://doi.org/10.1214/ss/1009213726"
+    },
+    {
+      "id": "hulten2001cva",
+      "title": "Mining time-changing data streams",
+      "authors": "Geoff Hulten, Laurie Spencer, and Pedro Domingos",
+      "year": "2001",
+      "venue": "KDD",
+      "topic": "streaming-tree",
+      "url": "https://doi.org/10.1145/502512.502529"
+    },
+    {
+      "id": "friedman2002stochastic",
+      "title": "Stochastic gradient boosting",
+      "authors": "Jerome H. Friedman",
+      "year": "2002",
+      "venue": "Computational Statistics & Data Analysis",
+      "topic": "boosting",
+      "url": "https://doi.org/10.1016/S0167-9473(01)00065-2"
+    },
+    {
+      "id": "loh2002guide",
+      "title": "Regression trees with unbiased variable selection and interaction detection",
+      "authors": "Wei-Yin Loh",
+      "year": "2002",
+      "venue": "Statistica Sinica",
+      "topic": "classical",
+      "url": "https://www3.stat.sinica.edu.tw/statistica/j12n2/j12n24/j12n24.htm"
+    },
+    {
+      "id": "liaw2002randomforest",
+      "title": "Classification and Regression by randomForest",
+      "authors": "Andy Liaw and Matthew Wiener",
+      "year": "2002",
+      "venue": "R News",
+      "topic": "ensemble",
+      "url": "https://journal.r-project.org/articles/RN-2002-022/"
+    },
+    {
+      "id": "landwehr2005lmt",
+      "title": "Logistic Model Trees",
+      "authors": "Niels Landwehr, Mark Hall, and Eibe Frank",
+      "year": "2005",
+      "venue": "Machine Learning",
+      "topic": "classical",
+      "url": "https://doi.org/10.1007/s10994-005-0466-3"
+    },
+    {
+      "id": "hothorn2006ctree",
+      "title": "Unbiased recursive partitioning: A conditional inference framework",
+      "authors": "Torsten Hothorn, Kurt Hornik, and Achim Zeileis",
+      "year": "2006",
+      "venue": "Journal of Computational and Graphical Statistics",
+      "topic": "classical",
+      "url": "https://doi.org/10.1198/106186006X133933"
+    },
+    {
+      "id": "geurts2006extratrees",
+      "title": "Extremely randomized trees",
+      "authors": "Pierre Geurts, Damien Ernst, and Louis Wehenkel",
+      "year": "2006",
+      "venue": "Machine Learning",
+      "topic": "ensemble",
+      "url": "https://doi.org/10.1007/s10994-006-6226-1"
+    },
+    {
+      "id": "rodriguez2006rotation",
+      "title": "Rotation Forest: A New Classifier Ensemble Method",
+      "authors": "Juan J. Rodriguez, Ludmila I. Kuncheva, and Carlos J. Alonso",
+      "year": "2006",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "topic": "ensemble",
+      "url": "https://doi.org/10.1109/TPAMI.2006.211"
+    },
+    {
+      "id": "meinshausen2006quantile",
+      "title": "Quantile Regression Forests",
+      "authors": "Nicolai Meinshausen",
+      "year": "2006",
+      "venue": "Journal of Machine Learning Research",
+      "topic": "specialized-forest",
+      "url": "https://jmlr.org/papers/v7/meinshausen06a.html"
+    },
+    {
+      "id": "shi2007bestfirst",
+      "title": "Best-first decision tree learning",
+      "authors": "Haijian Shi",
+      "year": "2007",
+      "venue": "University of Waikato Technical Report",
+      "topic": "boosting",
+      "url": "https://hdl.handle.net/10289/2317"
+    },
+    {
+      "id": "bifet2007adwin",
+      "title": "Learning from time-changing data with adaptive windowing",
+      "authors": "Albert Bifet and Ricard Gavalda",
+      "year": "2007",
+      "venue": "SIAM International Conference on Data Mining",
+      "topic": "streaming-tree",
+      "url": "https://doi.org/10.1137/1.9781611972771.42"
+    },
+    {
+      "id": "liu2008isolation",
+      "title": "Isolation Forest",
+      "authors": "Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou",
+      "year": "2008",
+      "venue": "ICDM",
+      "topic": "anomaly",
+      "url": "https://doi.org/10.1109/ICDM.2008.17"
+    },
+    {
+      "id": "zeileis2008partykit",
+      "title": "Model-based recursive partitioning",
+      "authors": "Achim Zeileis, Torsten Hothorn, and Kurt Hornik",
+      "year": "2008",
+      "venue": "Journal of Computational and Graphical Statistics",
+      "topic": "classical",
+      "url": "https://doi.org/10.1198/106186008X319331"
+    },
+    {
+      "id": "ishwaran2008rsf",
+      "title": "Random Survival Forests",
+      "authors": "Hemant Ishwaran, Udaya B. Kogalur, Eugene H. Blackstone, and Michael S. Lauer",
+      "year": "2008",
+      "venue": "The Annals of Applied Statistics",
+      "topic": "specialized-forest",
+      "url": "https://doi.org/10.1214/08-AOAS169"
+    },
+    {
+      "id": "saffari2009onlineforests",
+      "title": "Online random forests",
+      "authors": "Amir Saffari, Christian Leistner, Jakob Santner, Martin Godec, and Horst Bischof",
+      "year": "2009",
+      "venue": "ICCV Workshops",
+      "topic": "streaming-tree",
+      "url": "https://doi.org/10.1109/ICCVW.2009.5457447"
+    },
+    {
+      "id": "chipman2010bart",
+      "title": "BART: Bayesian additive regression trees",
+      "authors": "Hugh A. Chipman, Edward I. George, and Robert E. McCulloch",
+      "year": "2010",
+      "venue": "The Annals of Applied Statistics",
+      "topic": "bayesian-tree",
+      "url": "https://doi.org/10.1214/09-AOAS285"
+    },
+    {
+      "id": "bifet2010leveraging",
+      "title": "Leveraging Bagging for Evolving Data Streams",
+      "authors": "Albert Bifet, Geoffrey Holmes, and Bernhard Pfahringer",
+      "year": "2010",
+      "venue": "ECML PKDD",
+      "topic": "streaming-tree",
+      "url": "https://doi.org/10.1007/978-3-642-15880-3_3"
+    },
+    {
+      "id": "rokach2010ensemble",
+      "title": "Ensemble-based classifiers",
+      "authors": "Lior Rokach",
+      "year": "2010",
+      "venue": "Artificial Intelligence Review",
+      "topic": "survey",
+      "url": "https://doi.org/10.1007/s10462-009-9124-7"
+    },
+    {
+      "id": "tyree2011parallel",
+      "title": "Parallel boosted regression trees for web search ranking",
+      "authors": "Stephen Tyree, Kilian Q. Weinberger, Kunal Agrawal, and Jennifer Paykin",
+      "year": "2011",
+      "venue": "WWW",
+      "topic": "boosting",
+      "url": "https://doi.org/10.1145/1963405.1963487"
+    },
+    {
+      "id": "ikonomovska2011modeltrees",
+      "title": "Learning model trees from evolving data streams",
+      "authors": "Elena Ikonomovska, Joao Gama, and Saso Dzeroski",
+      "year": "2011",
+      "venue": "Data Mining and Knowledge Discovery",
+      "topic": "streaming-tree",
+      "url": "https://doi.org/10.1007/s10618-010-0201-y"
+    },
+    {
+      "id": "liu2012isolation",
+      "title": "Isolation-based anomaly detection",
+      "authors": "Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou",
+      "year": "2012",
+      "venue": "ACM Transactions on Knowledge Discovery from Data",
+      "topic": "anomaly",
+      "url": "https://doi.org/10.1145/2133360.2133363"
+    },
+    {
+      "id": "green2012bart",
+      "title": "Modeling heterogeneous treatment effects in survey experiments with Bayesian additive regression trees",
+      "authors": "Donald P. Green and Holger L. Kern",
+      "year": "2012",
+      "venue": "Public Opinion Quarterly",
+      "topic": "bayesian-tree",
+      "url": "https://doi.org/10.1093/poq/nfs036"
+    },
+    {
+      "id": "cutler2012randomforests",
+      "title": "Random Forests for Classification in Ecology",
+      "authors": "D. Richard Cutler, Thomas C. Edwards Jr., Karen H. Beard, Adele Cutler, Kyle T. Hess, Jacob Gibson, and Joshua J. Lawler",
+      "year": "2012",
+      "venue": "Ecology",
+      "topic": "ensemble",
+      "url": "https://doi.org/10.1890/07-0539.1"
+    },
+    {
+      "id": "barros2012evolutionary",
+      "title": "A survey of evolutionary algorithms for decision-tree induction",
+      "authors": "Rodrigo C. Barros, Marcio P. Basgalupp, Andre C. P. L. F. de Carvalho, and Alex A. Freitas",
+      "year": "2012",
+      "venue": "IEEE Transactions on Systems, Man, and Cybernetics, Part C",
+      "topic": "survey",
+      "url": "https://doi.org/10.1109/TSMCC.2011.2157494"
+    },
+    {
+      "id": "natekin2013tutorial",
+      "title": "Gradient boosting machines, a tutorial",
+      "authors": "Alexey Natekin and Alois Knoll",
+      "year": "2013",
+      "venue": "Frontiers in Neurorobotics",
+      "topic": "boosting",
+      "url": "https://doi.org/10.3389/fnbot.2013.00021"
+    },
+    {
+      "id": "kotsiantis2013overview",
+      "title": "Decision trees: a recent overview",
+      "authors": "Sotiris B. Kotsiantis",
+      "year": "2013",
+      "venue": "Artificial Intelligence Review",
+      "topic": "survey",
+      "url": "https://doi.org/10.1007/s10462-011-9272-4"
+    },
+    {
+      "id": "lakshminarayanan2014mondrian",
+      "title": "Mondrian Forests: Efficient Online Random Forests",
+      "authors": "Balaji Lakshminarayanan, Daniel M. Roy, and Yee Whye Teh",
+      "year": "2014",
+      "venue": "NeurIPS",
+      "topic": "ensemble",
+      "url": "https://papers.nips.cc/paper/2014/hash/195c9c0797f42473f2c2f922c4cf52cf-Abstract.html"
+    },
+    {
+      "id": "wager2014rfci",
+      "title": "Confidence intervals for random forests: The jackknife and the infinitesimal jackknife",
+      "authors": "Stefan Wager, Trevor Hastie, and Bradley Efron",
+      "year": "2014",
+      "venue": "Journal of Machine Learning Research",
+      "topic": "uncertainty",
+      "url": "https://jmlr.org/papers/v15/wager14a.html"
+    },
+    {
+      "id": "scornet2015consistency",
+      "title": "Consistency of random forests",
+      "authors": "Erwan Scornet, Gerard Biau, and Jean-Philippe Vert",
+      "year": "2015",
+      "venue": "The Annals of Statistics",
+      "topic": "theory",
+      "url": "https://doi.org/10.1214/15-AOS1321"
+    },
+    {
+      "id": "sparapani2016nonparametric",
+      "title": "Nonparametric survival analysis using Bayesian additive regression trees",
+      "authors": "Rodney Sparapani, Brent R. Logan, Robert E. McCulloch, and Purushottam W. Laud",
+      "year": "2016",
+      "venue": "Statistics in Medicine",
+      "topic": "bayesian-tree",
+      "url": "https://doi.org/10.1002/sim.6893"
+    },
+    {
+      "id": "athey2016causaltrees",
+      "title": "Recursive partitioning for heterogeneous causal effects",
+      "authors": "Susan Athey and Guido Imbens",
+      "year": "2016",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "topic": "causal-forest",
+      "url": "https://doi.org/10.1073/pnas.1510489113"
+    },
+    {
+      "id": "biau2016guided",
+      "title": "A random forest guided tour",
+      "authors": "Gerard Biau and Erwan Scornet",
+      "year": "2016",
+      "venue": "TEST",
+      "topic": "survey",
+      "url": "https://doi.org/10.1007/s11749-016-0481-7"
+    },
+    {
+      "id": "mentch2016randomization",
+      "title": "Quantifying uncertainty in random forests via local neighborhoods",
+      "authors": "Lucas Mentch and Giles Hooker",
+      "year": "2016",
+      "venue": "arXiv",
+      "topic": "uncertainty",
+      "url": "https://arxiv.org/abs/1604.01184"
+    },
+    {
+      "id": "mentch2016uncertainty",
+      "title": "Quantifying uncertainty in random forests via confidence intervals and hypothesis tests",
+      "authors": "Lucas Mentch and Giles Hooker",
+      "year": "2016",
+      "venue": "Journal of Machine Learning Research",
+      "topic": "uncertainty",
+      "url": "https://jmlr.org/papers/v17/14-168.html"
+    },
+    {
+      "id": "tomita2017randomer",
+      "title": "Randomer Forests",
+      "authors": "Tyler M. Tomita, James Browne, Cencheng Shen, Jaewon Chung, et al.",
+      "year": "2017",
+      "venue": "Journal of Machine Learning Research",
+      "topic": "ensemble",
+      "url": "https://jmlr.org/papers/v18/16-389.html"
+    },
+    {
+      "id": "bertsimas2017oct",
+      "title": "Optimal classification trees",
+      "authors": "Dimitris Bertsimas and Jack Dunn",
+      "year": "2017",
+      "venue": "Machine Learning",
+      "topic": "optimal-tree",
+      "url": "https://doi.org/10.1007/s10994-017-5633-9"
+    },
+    {
+      "id": "gomes2017arf",
+      "title": "Adaptive random forests for evolving data stream classification",
+      "authors": "Heitor M. Gomes, Albert Bifet, Jesse Read, Jean Paul Barddal, Fabricio Enembreck, Bernhard Pfahringer, Geoff Holmes, and Talel Abdessalem",
+      "year": "2017",
+      "venue": "Machine Learning",
+      "topic": "streaming-tree",
+      "url": "https://doi.org/10.1007/s10994-017-5642-8"
+    },
+    {
+      "id": "wager2018causalforest",
+      "title": "Estimation and Inference of Heterogeneous Treatment Effects using Random Forests",
+      "authors": "Stefan Wager and Susan Athey",
+      "year": "2018",
+      "venue": "Journal of the American Statistical Association",
+      "topic": "causal-forest",
+      "url": "https://doi.org/10.1080/01621459.2017.1319839"
+    },
+    {
+      "id": "narodytska2018sat",
+      "title": "Learning optimal decision trees with SAT",
+      "authors": "Nina Narodytska, Alexey Ignatiev, Filipe Pereira, and Joao Marques-Silva",
+      "year": "2018",
+      "venue": "IJCAI",
+      "topic": "optimal-tree",
+      "url": "https://doi.org/10.24963/ijcai.2018/189"
+    },
+    {
+      "id": "athey2019grf",
+      "title": "Generalized Random Forests",
+      "authors": "Susan Athey, Julie Tibshirani, and Stefan Wager",
+      "year": "2019",
+      "venue": "The Annals of Statistics",
+      "topic": "causal-forest",
+      "url": "https://doi.org/10.1214/18-AOS1709"
+    },
+    {
+      "id": "aghaei2019fairtrees",
+      "title": "Learning optimal and fair decision trees for non-discriminative decision-making",
+      "authors": "Sina Aghaei, Mohammad Javad Azizi, and Phebe Vayanos",
+      "year": "2019",
+      "venue": "AAAI",
+      "topic": "fairness",
+      "url": "https://doi.org/10.1609/aaai.v33i01.33011418"
+    },
+    {
+      "id": "bertsimas2019lens",
+      "title": "Machine Learning under a Modern Optimization Lens",
+      "authors": "Dimitris Bertsimas and Jack Dunn",
+      "year": "2019",
+      "venue": "Dynamic Ideas",
+      "topic": "optimal-tree",
+      "url": "https://www.dynamic-ideas.com/books/machine-learning-under-a-modern-optimization-lens"
+    },
+    {
+      "id": "hu2019osdt",
+      "title": "Optimal Sparse Decision Trees",
+      "authors": "Xiyang Hu, Cynthia Rudin, and Margo Seltzer",
+      "year": "2019",
+      "venue": "NeurIPS",
+      "topic": "optimal-tree",
+      "url": "https://papers.nips.cc/paper/2019/hash/ac52c626afc10d4075708ac4c778ddfc-Abstract.html"
+    },
+    {
+      "id": "verwer2019mip",
+      "title": "Learning optimal classification trees using a binary linear program formulation",
+      "authors": "Sicco Verwer and Yingqian Zhang",
+      "year": "2019",
+      "venue": "Artificial Intelligence",
+      "topic": "optimal-tree",
+      "url": "https://doi.org/10.1016/j.artint.2018.11.002"
+    },
+    {
+      "id": "pratola2020heteroscedasticbart",
+      "title": "Heteroscedastic BART via multiplicative regression trees",
+      "authors": "Matthew T. Pratola, Hugh A. Chipman, Edward I. George, and Robert E. McCulloch",
+      "year": "2020",
+      "venue": "Journal of Computational and Graphical Statistics",
+      "topic": "bayesian-tree",
+      "url": "https://doi.org/10.1080/10618600.2019.1677243"
+    },
+    {
+      "id": "aglin2020dl85",
+      "title": "Learning Optimal Decision Trees Using Caching Branch-and-Bound Search",
+      "authors": "Gael Aglin, Siegfried Nijssen, and Pierre Schaus",
+      "year": "2020",
+      "venue": "AAAI",
+      "topic": "optimal-tree",
+      "url": "https://doi.org/10.1609/aaai.v34i04.5711"
+    },
+    {
+      "id": "demirovic2020nonlinear",
+      "title": "Optimal Decision Trees for Nonlinear Metrics",
+      "authors": "Emir Demirovic and Peter J. Stuckey",
+      "year": "2020",
+      "venue": "arXiv",
+      "topic": "optimal-tree",
+      "url": "https://arxiv.org/abs/2009.06921"
+    },
+    {
+      "id": "lin2020gosdt",
+      "title": "Generalized and Scalable Optimal Sparse Decision Trees",
+      "authors": "Jimmy Lin, Chudi Zhong, Diane Hu, Cynthia Rudin, and Margo Seltzer",
+      "year": "2020",
+      "venue": "ICML",
+      "topic": "optimal-tree",
+      "url": "https://proceedings.mlr.press/v119/lin20g.html"
+    },
+    {
+      "id": "nie2021rloss",
+      "title": "Quasi-oracle estimation of heterogeneous treatment effects",
+      "authors": "Xinkun Nie and Stefan Wager",
+      "year": "2021",
+      "venue": "Biometrika",
+      "topic": "causal-forest",
+      "url": "https://doi.org/10.1093/biomet/asaa076"
+    },
+    {
+      "id": "bentejac2021comparative",
+      "title": "A comparative analysis of gradient boosting algorithms",
+      "authors": "Candice Bentejac, Anna Csorgo, and Gonzalo Martinez-Munoz",
+      "year": "2021",
+      "venue": "Artificial Intelligence Review",
+      "topic": "survey",
+      "url": "https://doi.org/10.1007/s10462-020-09896-5"
+    },
+    {
+      "id": "bertsimas2022survival",
+      "title": "Optimal survival trees",
+      "authors": "Dimitris Bertsimas, Jack Dunn, Emma Gibson, and Agni Orfanoudaki",
+      "year": "2022",
+      "venue": "Machine Learning",
+      "topic": "optimal-tree",
+      "url": "https://doi.org/10.1007/s10994-021-06117-0"
+    },
+    {
+      "id": "demirovic2022murtree",
+      "title": "MurTree: optimal decision trees via dynamic programming and search",
+      "authors": "Emir Demirovic, Anna Lukina, Emmanuel Hebrard, Jeffrey Chan, James Bailey, Christopher Leckie, Kotagiri Ramamohanarao, and Peter J. Stuckey",
+      "year": "2022",
+      "venue": "Journal of Machine Learning Research",
+      "topic": "optimal-tree",
+      "url": "https://jmlr.org/papers/v23/20-520.html"
+    },
+    {
+      "id": "chen2023optpolicy",
+      "title": "Fast Optimization of Weighted Sparse Decision Trees for use in Optimal Treatment Regimes and Optimal Policy Design",
+      "authors": "Chaofan Chen, Cynthia Rudin, and Margo Seltzer",
+      "year": "2023",
+      "venue": "Journal of Machine Learning Research",
+      "topic": "optimal-tree",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10039433/"
+    },
+    {
+      "id": "eiben2023parameterized",
+      "title": "Parameterized Complexity of Learning Small Decision Trees",
+      "authors": "Eduard Eiben, Robert Ganian, Thekla Hamm, and Sebastian Ordyniak",
+      "year": "2023",
+      "venue": "Artificial Intelligence",
+      "topic": "optimal-tree",
+      "url": "https://doi.org/10.1016/j.artint.2022.103844"
+    },
+    {
+      "id": "costa2023recent",
+      "title": "Recent advances in decision trees: an updated survey",
+      "authors": "Vinicius G. Costa and Carlos E. Pedreira",
+      "year": "2023",
+      "venue": "Artificial Intelligence Review",
+      "topic": "survey",
+      "url": "https://doi.org/10.1007/s10462-022-10275-5"
+    },
+    {
+      "id": "demirovic2023responsible",
+      "title": "Decision trees: from efficient prediction to responsible AI",
+      "authors": "Emir Demirovic and Peter J. Stuckey",
+      "year": "2023",
+      "venue": "Frontiers in Artificial Intelligence",
+      "topic": "survey",
+      "url": "https://doi.org/10.3389/frai.2023.1124553"
+    },
+    {
+      "id": "eisenburger2024labelnoise",
+      "title": "Training Gradient Boosted Decision Trees on Tabular Data Containing Label Noise for Classification Tasks",
+      "authors": "Anita Eisenburger, Daniel Otten, Anselm Hudde, and Frank Hopfgartner",
+      "year": "2024",
+      "venue": "arXiv",
+      "topic": "boosting",
+      "url": "https://arxiv.org/abs/2409.08647"
+    },
+    {
+      "id": "yildiz2024medicalgbdt",
+      "title": "Gradient Boosting Decision Trees on Medical Diagnosis over Tabular Data",
+      "authors": "A. Yarkin Yildiz and Asli Kalayci",
+      "year": "2024",
+      "venue": "arXiv",
+      "topic": "boosting",
+      "url": "https://arxiv.org/abs/2410.03705"
+    },
+    {
+      "id": "huang2024rlf",
+      "title": "Riemann-Lebesgue Forest for Regression",
+      "authors": "Wei-Min Huang and Tian Qin",
+      "year": "2024",
+      "venue": "arXiv",
+      "topic": "ensemble",
+      "url": "https://arxiv.org/abs/2402.04550"
+    },
+    {
+      "id": "charbuty2024survey",
+      "title": "A Survey of Decision Trees: Concepts, Algorithms, and Applications",
+      "authors": "Bahar Charbuty and Adnan Abdulazeez",
+      "year": "2024",
+      "venue": "IEEE Access",
+      "topic": "survey",
+      "url": "https://doi.org/10.1109/ACCESS.2024.3416838"
+    },
+    {
+      "id": "jayawardhana2025llmboost",
+      "title": "Transformers Boost the Performance of Decision Trees on Tabular Data across Sample Sizes",
+      "authors": "Mayuka Jayawardhana, Renbo, Samuel Dooley, Valeriia Cherepanova, Andrew Gordon Wilson, Frank Hutter, Colin White, Tom Goldstein, and Micah Goldblum",
+      "year": "2025",
+      "venue": "arXiv",
+      "topic": "boosting",
+      "url": "https://arxiv.org/abs/2502.02672"
+    },
+    {
+      "id": "harviainen2025pruning",
+      "title": "Optimal Decision Tree Pruning Revisited: Algorithms and Complexity",
+      "authors": "Juha Harviainen, Frank Sommer, Manuel Sorge, and Stefan Szeider",
+      "year": "2025",
+      "venue": "arXiv",
+      "topic": "optimal-tree",
+      "url": "https://arxiv.org/abs/2503.03576"
+    },
+    {
+      "id": "he2025hodt",
+      "title": "Foundational theory for optimal decision tree problems. II. Optimal hypersurface decision tree algorithm",
+      "authors": "Xi He",
+      "year": "2025",
+      "venue": "arXiv",
+      "topic": "optimal-tree",
+      "url": "https://arxiv.org/abs/2509.12057"
+    },
+    {
+      "id": "odtquantile2026",
+      "title": "Interpretable Quantile Regression by Optimal Decision Trees",
+      "authors": "Valentin Lemaire, Gael Aglin, and Siegfried Nijssen",
+      "year": "2026",
+      "venue": "arXiv",
+      "topic": "optimal-tree",
+      "url": "https://arxiv.org/abs/2604.21042"
+    }
+  ]
+}
